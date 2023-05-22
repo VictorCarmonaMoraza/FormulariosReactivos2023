@@ -75,22 +75,37 @@
 <div class="row">
     <div class="col">
 
+      <!--Indica que el formulario es valido-->
         <span>Valid</span>
-        <pre>{{ 'objeto' | json }}</pre>
+        <pre>{{ myForm.valid  | json }}</pre>
 
+        <!--Indica que el formulario no ha sido tocado ni manipulado-->
         <span>Pristine</span>
-        <pre>{{ 'objeto' | json }}</pre>
+        <pre>{{ myForm.pristine | json }}</pre>
 
+        <!--Cunado tocamos el formulario-->
         <span>Touched</span>
-        <pre>{{ 'objeto' | json }}</pre>
+        <pre>{{ myForm.touched | json }}</pre>
 
         <span>Value</span>
-        <pre>{{ 'objeto' | json }}</pre>
+        <pre>{{ myForm.value | json }}</pre>
 
         <span>Precio</span>
-        <pre>{{ 'objeto' | json }}</pre>
+        <pre>{{ myForm.controls['price'].value | json }}</pre>
+
+        <span>Precio - Errors</span>
+        <pre>{{ myForm.controls['price'].errors | json }}</pre>
 
         <span>Producto</span>
-        <pre>{{ 'objeto' | json }}</pre>
+        <pre>{{ myForm.controls['name'].value | json }}</pre>
+
+        <span>Producto - Errors</span>
+        <pre>{{ myForm.controls['name'].errors | json }}</pre>
+
+        <span>Stock</span>
+        <pre>{{ myForm.controls['insStorage'].value | json }}</pre>
+
+        <span>Stock - Errors</span>
+        <pre>{{ myForm.controls['insStorage'].errors | json }}</pre>
     </div>
 </div>
