@@ -35,7 +35,7 @@ export class BasicPageComponent implements OnInit{
     }
     //console.log(this.myForm.value);
     //Restablecer el formulario parte 1
-    //this.myForm.reset();
+    this.myForm.reset();
 
     //Restablecer formulario parte 2
     //this.myForm.reset({ price: 10, insStorage: 0 });
