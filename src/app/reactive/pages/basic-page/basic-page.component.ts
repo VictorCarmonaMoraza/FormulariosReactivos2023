@@ -33,7 +33,7 @@ export class BasicPageComponent implements OnInit{
     if (this.myForm.invalid) {
       return;
     }
-    console.log(this.myForm.value);
+    //console.log(this.myForm.value);
     //Restablecer el formulario parte 1
     //this.myForm.reset();
 
