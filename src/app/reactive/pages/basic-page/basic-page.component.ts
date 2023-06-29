@@ -19,7 +19,7 @@ export class BasicPageComponent implements OnInit{
 
   }
   ngOnInit(): void {
-    this.myForm.reset(propiedadesInicialesFormulario);
+    //this.myForm.reset(propiedadesInicialesFormulario);
   }
 
   public myForm: FormGroup = this.fb.group({
@@ -31,6 +31,8 @@ export class BasicPageComponent implements OnInit{
   onSave(): void {
 
     if (this.myForm.invalid) {
+      //Marca que todos los campos fueron tocados
+      this.myForm.markAllAsTouched()
       return;
     }
     //console.log(this.myForm.value);
